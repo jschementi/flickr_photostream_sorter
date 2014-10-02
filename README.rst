@@ -25,6 +25,7 @@ Then set them as environment variables by running the following commands
 (make sure to change the values to match what Flickr provided):
 
 ::
+
   echo "export FLICKR_API_KEY=0123456789abcdef0123456789abcdef" >> $HOME/.bash_profile
   echo "export FLICKR_SECRET=0123456789abcdef" >> $HOME/.bash_profile
   source $HOME/.bash_profile
@@ -38,6 +39,7 @@ isn't installed, or you have a version older than 2.7,
 `install the latest version of Python 2.7 <https://www.python.org/downloads/>`_.
 
 ::
+
   pip install flickr_photostream_sorter
 
 
@@ -45,6 +47,7 @@ Usage
 -----
 
 ::
+
   flickr_photostream_sorter
 
 The first time you run this, your default web browser will open to Flickr's
