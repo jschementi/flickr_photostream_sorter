@@ -2,3 +2,5 @@
 /include
 /lib
 /.Python
+/dist
+/flickr_photostream_sorter.egg-info
