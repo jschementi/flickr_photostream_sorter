@@ -1,6 +1,6 @@
 from datetime import datetime
 from os import environ
-from os.path import expanduser, join
+from os.path import expanduser
 import json
 
 import flickrapi
@@ -22,24 +22,17 @@ def main():
 
     all_photos = []
 
-    try:
-        with open(join(home, ".flickr/photos.json"), "r") as photos_file:
-            print '-----> Using cached photos'
-            all_photos = json.loads(photos_file.read())
-    except IOError:
-        print '-----> Fetching all photos'
-        total_pages = 1
-        page = 1
-        while page <= total_pages:
-            print '       Fetching page {} out of {}'.format(page, total_pages)
-            res = json.loads(flickr.photos_search(user_id='me', page=page, per_page=500, extras='date_upload,date_taken')[14:-1])
-            total_pages = res['photos']['pages']
-            page = res['photos']['page'] + 1
-            photos = res['photos']['photo']
-            all_photos.extend(photos)
-        with open(join(home, '.flickr/photos.json'), 'w') as photos_file:
-            print '-----> Saving photos for future use'
-            photos_file.write(json.dumps(all_photos))
+    print '-----> Fetching all photos'
+
+    total_pages = 1
+    page = 1
+    while page <= total_pages:
+        print '       Fetching page {} out of {}'.format(page, total_pages)
+        res = json.loads(flickr.photos_search(user_id='me', page=page, per_page=500, extras='date_upload,date_taken')[14:-1])
+        total_pages = res['photos']['pages']
+        page = res['photos']['page'] + 1
+        photos = res['photos']['photo']
+        all_photos.extend(photos)
 
     print '-----> Updating dates'
 
