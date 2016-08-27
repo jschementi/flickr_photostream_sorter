@@ -7,12 +7,13 @@ is taken. It accomplishes this by setting the date posted to be the same as
 the date taken.
 
 This is not something Flickr's website current can do for you, other than
-manually doing it for each photo, as this help forum thread shows:
-https://www.flickr.com/help/forum/en-us/72157634003151196/
+manually doing it for each photo, `as discussed on the Flickr Help Forum <https://www.flickr.com/help/forum/en-us/72157634003151196/>`_.
 
 - On Mac OS X, all commands can be run in `Terminal.app <https://www.youtube.com/watch?v=zw7Nd67_aFw>`_.
 - On Windows, all commands can be run in the `Command Prompt <http://windows.microsoft.com/en-us/windows-vista/open-a-command-prompt-window>`_.
 - On Linux, use whatever terminal your window manager supports.
+
+For additional information, see `the announcement thread on the Flickr Help Forum <https://www.flickr.com/help/forum/en-us/72157647859111858/>`_.
 
 
 Authentication
